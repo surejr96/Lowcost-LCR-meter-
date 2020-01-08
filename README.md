@@ -15,25 +15,32 @@ Device under test (DUT) connection: Two connectors, made of wire loop to save co
 **Suggested Parts :**
 
 2N3904 NPN             x 5
+
 2N3906 PNP             x 2
+
 33 ohm , 1/2 W         x 1
+
 3.3k ohm , 1/4 W       x 7
+
 10k ohm , 1/4 W        x 7
+
 1N5819 Schottky diode  x 4
+
 1uF capacitor          x 1
+
 47uF capacitor         x 1
 
 **Software Description:**
 
 A virtual COM power using a 115200 baud, 8N1 protocol with no hardware handshaking shall be provided with support to the following commands.
 
-Debug:
+**Debug:**
 
 If “reset” is received, the hardware shall reset.
 
 If “voltage” is received, the hardware shall return the voltage across DUT2-DUT1.
 
-LCR commands:
+**LCR commands:**
 
 If “resistor” is received, return the capacitance of the DUT.
 
@@ -45,7 +52,7 @@ If “esr” is received, return the ESR of the inductor under test.
 
 If “auto” is received, return the value of the DUT that is most predominant (i.e. an inductor with 1ohm ESR and 10mH inductance will return the inductance and ESR values, a 100kohm resistor will return the resistance, and a 10uF capacitor will return the capacitance
 
-Tested Ratings/Ranges:
+**Tested Ratings/Ranges:**
 
 The voltage is limited to 0 to 3.3V.
 
@@ -55,7 +62,7 @@ Capacitance value from 1nF to 100uF.
 
 Inductance value from 1nH to 100mH.
 
-Instructions for using code with TI's Code Composer Studio (CCS):
+**Instructions for using code with TI's Code Composer Studio (CCS):**
 
 Download the zip.
 
@@ -67,7 +74,7 @@ Debug and setup terminal on your pc for 115200 baud, 8N1 protocol.
 
 Run.
 
-Hardware build instructions:
+**Hardware build instructions:**
 
 Refer schematic for circuit diagram.
 
