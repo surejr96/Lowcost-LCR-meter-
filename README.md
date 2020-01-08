@@ -1,5 +1,6 @@
 # Lowcost-LCR-meter
-Overview:
+
+**Overview:**
 
 An LCR meter is an electronic test equipment used to measure the inductance (L), capacitance (C), and resistance (R) of an electronic component(DUT). A design goal of this project is to limit the total cost of the daughterboard and components added to the TM4C123GXL evaluation board to $3.
 Project provides complete user interface through virtual COM port (UART) on the evaluation board.
@@ -10,26 +11,19 @@ Serial interface: If using the EK-TM4C123GXL evaluation board, then the UART0 tx
 LCR measurement interface: A circuit is provided that will interface with the microcontroller and allow the user to test an L, C, or R value. The output of this circuit can be connected to the analog comparator and analog-to-digital converter inputs.
 3.3V supply: The circuit is powered completely from the 3.3V regulator output on the evaluation board.
 Device under test (DUT) connection: Two connectors, made of wire loop to save cost, are required to allow the DUT to be connected.
-Suggested Parts :
-Parts
-Quantity
-2N3904 NPN
-5
-2N3906 PNP
-2
-33 ohm , 1/2 W
-1
-3.3k ohm , 1/4 W
-7
-10k ohm , 1/4 W
-7
-1N5819 Schottky diode
-4
-1uF capacitor
-1
-47uF capacitor
-1
-Software Description:
+
+**Suggested Parts :**
+
+2N3904 NPN             x 5
+2N3906 PNP             x 2
+33 ohm , 1/2 W         x 1
+3.3k ohm , 1/4 W       x 7
+10k ohm , 1/4 W        x 7
+1N5819 Schottky diode  x 4
+1uF capacitor          x 1
+47uF capacitor         x 1
+
+**Software Description:**
 A virtual COM power using a 115200 baud, 8N1 protocol with no hardware handshaking shall be provided with support to the following commands.
 Debug:
 If “reset” is received, the hardware shall reset.
